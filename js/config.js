@@ -139,7 +139,7 @@ const SERVER_CONFIG = {
   POPUP: {
     enabled: true,
     image: "popup.jpg",
-    intervalMs: 15000, // 15 seconds
+    intervalMs: 5000, // 5 seconds
     title: "Ziore SMP Announcement"
   },
 
