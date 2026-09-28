@@ -8,13 +8,13 @@
 
 const SERVER_CONFIG = {
   // Basic Server Details
-  SERVER_NAME: "Aetheria SMP",
+  SERVER_NAME: "Ziore SMP",
   SERVER_TAGLINE: "Your next Minecraft adventure starts here.",
   SERVER_DESCRIPTION: "Experience a thriving Survival SMP with custom biomes, a player-driven economy, custom PvP arenas, and an active friendly community.",
-  SERVER_IP: "play.aetheriamc.com",
+  SERVER_IP: "play.ziore.com",
   BEDROCK_PORT: "19132",
   DISCORD_URL: "https://discord.gg/example",
-  STORE_URL: "https://store.aetheriamc.com",
+  STORE_URL: "https://store.ziore.com",
 
   // Server Info & Stats
   SERVER_VERSION: "1.20.4 - 1.20.6",
@@ -140,7 +140,7 @@ const SERVER_CONFIG = {
     enabled: true,
     image: "popup.jpg",
     intervalMs: 15000, // 15 seconds
-    title: "Special Announcement"
+    title: "Ziore SMP Announcement"
   },
 
   // Gallery Images / Screenshots

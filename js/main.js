@@ -28,7 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Konami Code Easter Egg
   setupKonamiCode();
 
-  // 7. Initial Welcome Achievement Toast
+  // 7. Recurring Promo Popup
+  setupPromoPopup();
+
+  // 8. Initial Welcome Achievement Toast
   setTimeout(() => {
     showToast("Achievement Unlocked: Found the Server!", "achievement", "🏆");
   }, 1200);
@@ -295,4 +298,62 @@ function setupKonamiCode() {
       current = 0;
     }
   });
+}
+
+/* --- Recurring Promo Popup --- */
+function setupPromoPopup() {
+  const config = window.SERVER_CONFIG || {};
+  const popupConfig = config.POPUP || {};
+  
+  if (!popupConfig.enabled) return;
+
+  const modal = document.getElementById('promo-popup');
+  if (!modal) return;
+
+  const closeBtn = modal.querySelector('.promo-modal-close');
+  let popupTimer = null;
+
+  function showPopup() {
+    modal.classList.add('active');
+  }
+
+  function hidePopup() {
+    modal.classList.remove('active');
+  }
+
+  function scheduleNextPopup() {
+    if (popupTimer) clearTimeout(popupTimer);
+    popupTimer = setTimeout(() => {
+      showPopup();
+    }, popupConfig.intervalMs || 15000);
+  }
+
+  // Close handlers
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      hidePopup();
+      scheduleNextPopup();
+    });
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      hidePopup();
+      scheduleNextPopup();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      hidePopup();
+      scheduleNextPopup();
+    }
+  });
+
+  // Respect prefers-reduced-motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    // Show first popup after initial delay
+    popupTimer = setTimeout(showPopup, popupConfig.intervalMs || 15000);
+  }
 }

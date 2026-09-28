@@ -75,8 +75,8 @@
           <div class="ip-box-wrapper">
             <div class="ip-box-label">Minecraft Server IP Address</div>
             <div class="ip-box-main">
-              <span class="ip-address" data-config="SERVER_IP">play.aetheriamc.com</span>
-              <button class="btn btn-primary copy-btn copy-ip-btn" data-ip="play.aetheriamc.com" aria-label="Copy server IP">
+              <span class="ip-address" data-config="SERVER_IP">play.ziore.com</span>
+              <button class="btn btn-primary copy-btn copy-ip-btn" data-ip="play.ziore.com" aria-label="Copy server IP">
                 <span>📋 COPY IP</span>
               </button>
             </div>
@@ -101,7 +101,7 @@
                 <span class="block-tooltip">Click me!</span>
               </div>
               <div>
-                <h3 class="preview-title" data-config="SERVER_NAME">Aetheria SMP</h3>
+                <h3 class="preview-title" data-config="SERVER_NAME">Ziore SMP</h3>
                 <p class="preview-sub">Java & Bedrock Supported</p>
               </div>
             </div>
@@ -280,20 +280,20 @@
     </div>
   </div>
 
-  <!-- 10. FOOTER SECTION -->
+<!-- 10. FOOTER SECTION -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#hero" class="brand-logo">
             <div class="brand-icon">⛏️</div>
-            <span data-config="SERVER_NAME">Aetheria SMP</span>
+            <span data-config="SERVER_NAME">Ziore SMP</span>
           </a>
           <p style="margin-bottom: 16px;" data-config="SERVER_DESCRIPTION">
             A premium, non-pay-to-win Minecraft Survival SMP with custom biomes, player economy, and balanced PvP.
           </p>
           <div style="display: flex; gap: 12px;">
-            <button class="btn btn-primary btn-sm copy-ip-btn" data-ip="play.aetheriamc.com">
+            <button class="btn btn-primary btn-sm copy-ip-btn" data-ip="play.ziore.com">
               <span>📋 Copy Server IP</span>
             </button>
           </div>
@@ -323,14 +323,14 @@
           <h4 class="footer-title">Server IP</h4>
           <p style="font-size: 0.9rem; margin-bottom: 8px;">Connect using Java or Bedrock:</p>
           <div style="background-color: #2D3748; padding: 10px 14px; border-radius: 8px; font-family: var(--font-pixel); font-size: 1.25rem; color: #81C784; text-align: center; border: 1px solid #4A5568;" data-config="SERVER_IP">
-            play.aetheriamc.com
+            play.ziore.com
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>
-          © <span id="copyright-year">2026</span> <span data-config="SERVER_NAME">Aetheria SMP</span>. All rights reserved. Not affiliated with Mojang Studios.
+          © <span id="copyright-year">2026</span> <span data-config="SERVER_NAME">Ziore SMP</span>. All rights reserved. Not affiliated with Mojang Studios.
         </div>
         <div>
           Made with ❤️ for the Minecraft Community
@@ -338,6 +338,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- Recurring Popup Modal -->
+  <div id="promo-popup" class="promo-modal" role="dialog" aria-modal="true" aria-label="Server announcement">
+    <div class="promo-modal-content">
+      <button class="promo-modal-close" aria-label="Close announcement">&times;</button>
+      <div class="promo-modal-body">
+        <img class="promo-modal-img" src="popup.jpg" alt="Ziore SMP Announcement" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'><rect fill=\'%23E8F5E9\' width=\'400\' height=\'300\'/><text x=\'200\' y=\'150\' font-family=\'sans-serif\' font-size=\'18\' fill=\'%232E7D32\' text-anchor=\'middle\'>Ziore SMP</text></svg>'">
+      </div>
+    </div>
+  </div>
 
   <!-- Config & JS Modules -->
   <script src="js/config.js"></script>

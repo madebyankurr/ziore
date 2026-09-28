@@ -1473,3 +1473,87 @@ img {
     text-align: center;
   }
 }
+
+/* --- Promo Popup Modal --- */
+.promo-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+  padding: 24px;
+}
+
+.promo-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.promo-modal-content {
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  max-width: 480px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: transform var(--transition-bounce);
+}
+
+.promo-modal.active .promo-modal-content {
+  transform: scale(1) translateY(0);
+}
+
+.promo-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--bg-surface-alt);
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid var(--border-light);
+  z-index: 10;
+  transition: all var(--transition-fast);
+}
+
+.promo-modal-close:hover {
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+  border-color: var(--primary-green);
+  transform: rotate(90deg);
+}
+
+.promo-modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .promo-modal-content {
+    max-width: 90%;
+    margin: 0 12px;
+  }
+  
+  .promo-modal-img {
+    max-height: 300px;
+  }
+}
