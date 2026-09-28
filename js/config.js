@@ -135,6 +135,14 @@ const SERVER_CONFIG = {
     }
   ],
 
+  // Recurring Popup Config
+  POPUP: {
+    enabled: true,
+    image: "popup.jpg",
+    intervalMs: 15000, // 15 seconds
+    title: "Special Announcement"
+  },
+
   // Gallery Images / Screenshots
   GALLERY_IMAGES: [
     {
