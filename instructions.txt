@@ -1,0 +1,258 @@
+Build a polished, modern Minecraft server landing website for my friend's Minecraft server.
+
+IMPORTANT:
+- This is a real project, so make the code clean, maintainable, responsive, and production-ready.
+- Do NOT make it look like a generic AI-generated template.
+- The website should feel like a premium Minecraft server website while still being fun and gaming-focused.
+- Use HTML, CSS, and vanilla JavaScript unless the existing project already uses a framework.
+- Make it deployable on Vercel.
+- Do not add unnecessary backend functionality unless explicitly required.
+- Use placeholder values where server-specific information is unknown, and clearly organize them so they can easily be changed later.
+
+DESIGN:
+- Minecraft-inspired aesthetic, but NOT a direct copy of Minecraft's official website.
+- Dark, atmospheric background.
+- Grass/stone/obsidian-style textures and subtle pixel-art elements.
+- Green as the primary accent color.
+- Strong typography and clean spacing.
+- Smooth animations and hover effects.
+- Responsive on desktop, tablet, and mobile.
+- Avoid excessive animations that make the website annoying or slow.
+- Add subtle particles or floating Minecraft-inspired elements if practical.
+- Use CSS gradients, shapes, and effects instead of relying on copyrighted Minecraft assets wherever possible.
+
+PAGE STRUCTURE:
+
+1. HERO SECTION
+- Large server name:
+  "[SERVER NAME]"
+- Tagline:
+  "Your next Minecraft adventure starts here."
+- Short description.
+- Display the Minecraft server IP prominently:
+  "play.example.com"
+- Add a "COPY IP" button.
+- When clicked:
+  - Copy the IP to clipboard.
+  - Change the button text temporarily to "COPIED!"
+  - Show a small success notification.
+- Add a large "JOIN DISCORD" button.
+- The Discord button should open a configurable Discord invite URL in a new tab.
+- Add a small server status indicator:
+  "● SERVER ONLINE"
+- Make the hero visually impressive.
+
+2. SERVER INFO
+Create a clean information section containing cards for:
+- Game Mode
+- Minecraft Version
+- Java / Bedrock support
+- Server Location
+- Current Players
+- Uptime
+
+Use placeholder values for now.
+
+3. FEATURES
+Create attractive cards for features such as:
+- ⚔️ Custom PvP
+- 🌍 Survival / SMP
+- 💰 Economy
+- 🎁 Events
+- 🏰 Player Builds
+- 🛡️ Anti-Cheat
+
+Make these easy to edit.
+
+4. HOW TO JOIN
+Create a simple 3-step section:
+
+STEP 1:
+Open Minecraft
+
+STEP 2:
+Add the server IP
+
+STEP 3:
+Join the server and start playing
+
+Make it visually interesting rather than just plain text.
+
+5. COMMUNITY / DISCORD
+Create a large Discord CTA section.
+
+Example:
+"THE COMMUNITY IS WAITING"
+
+"Join our Discord to meet players, participate in events, get announcements, and stay updated."
+
+Button:
+"JOIN DISCORD"
+
+Use the configurable Discord invite URL.
+
+6. STAFF SECTION
+Create staff cards with:
+- Minecraft-style avatar placeholder
+- Username
+- Role
+- Short description
+
+Example roles:
+Owner
+Admin
+Moderator
+Developer
+
+Make the data easy to modify.
+
+7. SERVER RULES
+Create a clean rules section with numbered cards.
+
+Example:
+01 — Respect other players
+02 — No cheating
+03 — No exploiting bugs
+04 — No spam
+05 — Follow staff instructions
+
+Keep it visually clean.
+
+8. GALLERY
+Create a Minecraft server screenshot/gallery section.
+
+Use placeholder images if actual screenshots are unavailable.
+Make the gallery responsive.
+Add hover effects.
+
+9. FUN / EASTER EGGS
+Add small interactive details throughout the website.
+
+Ideas:
+- A Minecraft-style grass block that can be clicked.
+- Clicking it should trigger a small block-breaking animation.
+- Occasionally show a tiny Creeper-style animation or particle effect.
+- Add a hidden easter egg activated by a keyboard sequence.
+- Add achievement-style notifications such as:
+  "Achievement Unlocked: Found the Server!"
+- Add subtle Minecraft-inspired sound effects ONLY if they can be implemented without copyrighted audio assets. Prefer no sound by default.
+
+Do not make these gimmicks interfere with usability.
+
+10. FOOTER
+Include:
+- Server name
+- Discord link
+- Server IP
+- Navigation links
+- "Made with ❤️ for the community"
+- Copyright text
+
+FUNCTIONALITY:
+- Smooth scrolling navigation.
+- Mobile navigation menu.
+- Copy-to-clipboard server IP.
+- Discord button.
+- Scroll animations.
+- Active navigation state if practical.
+- Toast notifications.
+- Accessible buttons and links.
+- Keyboard-friendly interactions.
+- Respect prefers-reduced-motion.
+
+SERVER CONFIG:
+Create ONE clearly identifiable configuration section/file where I can change:
+
+SERVER_NAME
+SERVER_IP
+DISCORD_URL
+SERVER_VERSION
+GAME_MODE
+SERVER_LOCATION
+PLAYER_COUNT
+SERVER_STATUS
+STAFF
+FEATURES
+RULES
+GALLERY_IMAGES
+
+Do not scatter these values throughout the code.
+
+IMPORTANT CODE QUALITY:
+- Use semantic HTML.
+- Keep CSS organized.
+- Keep JavaScript modular.
+- Avoid huge inline scripts.
+- Avoid duplicated code.
+- Use meaningful class names.
+- Add comments only where they are actually useful.
+- Make the site fast.
+- Optimize images where possible.
+- Make sure there are no console errors.
+- Make sure all buttons and links work.
+- Make sure the layout works at mobile widths.
+- Do not use fake functionality that looks functional but doesn't actually work.
+
+Before finishing:
+1. Inspect the existing project structure.
+2. Reuse the existing stack if one already exists.
+3. Implement the complete website.
+4. Run/build the project.
+5. Fix any errors.
+6. Check for broken links, console errors, layout issues, and missing assets.
+7. Give me a concise summary of what you changed and where I can edit the server information.
+
+The final result should feel like a real Minecraft server's official website, not a school project.DESIGN DIRECTION — IMPORTANT:
+
+The website MUST use a LIGHT THEME.
+
+Do NOT use a dark/black UI as the primary design.
+
+Overall visual direction:
+- Bright, clean, cheerful Minecraft-inspired aesthetic.
+- Warm off-white / cream background rather than pure white.
+- Soft Minecraft-green accents.
+- Light stone, grass, sky-blue, and earthy tones can be used as secondary colors.
+- Cards should be light with subtle shadows and borders.
+- Keep strong contrast so everything remains readable.
+- The website should feel like a sunny Minecraft world rather than a dark gaming dashboard.
+- Use subtle pixel-art/Minecraft-inspired decorative elements without making the page look childish.
+
+TYPOGRAPHY — IMPORTANT:
+
+Use a more handwritten / cursive-inspired display font for major headings and the server name.
+
+The typography should feel:
+- Playful
+- Handwritten
+- Slightly cursive
+- Minecraft-adventure themed
+- Clean enough to remain readable
+
+IMPORTANT:
+- Do NOT use an extremely fancy cursive font that is difficult to read.
+- Use the cursive/handwritten style primarily for:
+  - Server name
+  - Hero heading
+  - Major section headings
+  - Important CTA text where appropriate
+- Use a clean, highly readable sans-serif font for:
+  - Body text
+  - Rules
+  - Server information
+  - Navigation
+  - Buttons where readability matters
+
+Use a suitable web-safe or Google Fonts-style pairing if the project allows external fonts.
+
+The final typography should look intentionally designed, not like a random default cursive font.
+
+VISUAL GOAL:
+
+Imagine:
+"Sunny Minecraft survival server website + handwritten adventure journal + modern web design"
+
+NOT:
+"Dark esports website"
+"Generic gaming dashboard"
+"Corporate SaaS landing page"
