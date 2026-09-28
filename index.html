@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetheria SMP — Your Next Minecraft Adventure</title>
+  <meta name="description" content="Join Aetheria SMP, a premier Minecraft survival server featuring custom biomes, player economy, custom PvP, and an active friendly community!">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛏️</text></svg>">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="navbar" role="banner">
+    <div class="container navbar-container">
+      <a href="#hero" class="brand-logo" aria-label="Aetheria SMP Home">
+        <div class="brand-icon">⛏️</div>
+        <span data-config="SERVER_NAME">Aetheria SMP</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">Server Info</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#join" class="nav-link">How to Join</a></li>
+          <li><a href="#community" class="nav-link">Community</a></li>
+          <li><a href="#staff" class="nav-link">Staff</a></li>
+          <li><a href="#rules" class="nav-link">Rules</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-primary btn-sm copy-ip-btn" data-ip="play.aetheriamc.com">
+          <span>📋 Copy IP</span>
+        </button>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+      <div class="hero-background-shapes">
+        <div class="floating-cloud" style="width: 140px; height: 36px; top: 15%; left: -100px;"></div>
+        <div class="floating-cloud" style="width: 200px; height: 44px; top: 35%; left: -150px; animation-delay: 8s;"></div>
+        <div class="floating-cloud" style="width: 120px; height: 32px; top: 65%; left: -80px; animation-delay: 15s;"></div>
+      </div>
+      <canvas id="hero-canvas"></canvas>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="server-status-pill">
+            <span class="status-dot"></span>
+            <span class="status-text">SERVER ONLINE</span>
+            <span class="status-count">142/250 Online</span>
+          </div>
+
+          <h1 class="hero-title" data-config="SERVER_NAME">Aetheria SMP</h1>
+          <p class="hero-tagline" data-config="SERVER_TAGLINE">Your next Minecraft adventure starts here.</p>
+          <p class="hero-description" data-config="SERVER_DESCRIPTION">
+            Experience a thriving Survival SMP with custom biomes, a player-driven economy, custom PvP arenas, and an active friendly community.
+          </p>
+
+          <!-- Prominent Server IP Box -->
+          <div class="ip-box-wrapper">
+            <div class="ip-box-label">Minecraft Server IP Address</div>
+            <div class="ip-box-main">
+              <span class="ip-address" data-config="SERVER_IP">play.aetheriamc.com</span>
+              <button class="btn btn-primary copy-btn copy-ip-btn" data-ip="play.aetheriamc.com" aria-label="Copy server IP">
+                <span>📋 COPY IP</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="https://discord.gg/example" data-config-href="DISCORD_URL" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+              <span>💬 JOIN DISCORD</span>
+            </a>
+            <a href="#join" class="btn btn-outline btn-lg">
+              <span>📖 How To Join</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-preview">
+            <span class="preview-badge">Vanilla+ SMP</span>
+            <div class="preview-header">
+              <div class="interactive-grass-block" title="Click to mine me!">
+                🟩
+                <span class="block-tooltip">Click me!</span>
+              </div>
+              <div>
+                <h3 class="preview-title" data-config="SERVER_NAME">Aetheria SMP</h3>
+                <p class="preview-sub">Java & Bedrock Supported</p>
+              </div>
+            </div>
+            <div class="preview-stats">
+              <div class="p-stat-card">
+                <div class="p-stat-val">1.20.4+</div>
+                <div class="p-stat-lbl">Version</div>
+              </div>
+              <div class="p-stat-card">
+                <div class="p-stat-val">99.9%</div>
+                <div class="p-stat-lbl">Uptime</div>
+              </div>
+              <div class="p-stat-card">
+                <div class="p-stat-val">Custom</div>
+                <div class="p-stat-lbl">Biomes & PvP</div>
+              </div>
+              <div class="p-stat-card">
+                <div class="p-stat-val">Active</div>
+                <div class="p-stat-lbl">Community</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SERVER INFO SECTION -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">⚡ Server Overview</span>
+          <h2 class="section-title">Everything You Need To Know</h2>
+          <p class="section-subtitle">Key specs and highlights about our server network.</p>
+        </div>
+        <div id="server-info-grid" class="info-grid">
+          <!-- Dynamically populated from js/components.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FEATURES SECTION -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">✨ Server Features</span>
+          <h2 class="section-title">Crafted for Endless Fun</h2>
+          <p class="section-subtitle">Discover unique mechanics and features custom-built for our community.</p>
+        </div>
+        <div id="features-grid" class="features-grid">
+          <!-- Dynamically populated from js/components.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. HOW TO JOIN SECTION -->
+    <section id="join" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">🚀 Getting Started</span>
+          <h2 class="section-title">How To Join In 3 Easy Steps</h2>
+          <p class="section-subtitle">Start your adventure in less than two minutes!</p>
+        </div>
+        <div id="steps-wrapper" class="steps-wrapper">
+          <!-- Dynamically populated from js/components.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. COMMUNITY / DISCORD SECTION -->
+    <section id="community" class="section">
+      <div class="container">
+        <div class="discord-banner">
+          <div class="discord-banner-grid">
+            <div class="discord-content">
+              <span class="section-tag" style="background-color: #E0E7FF; color: #3730A3; border-color: #C7D2FE;">💬 Discord Community</span>
+              <h2 class="discord-title">THE COMMUNITY IS WAITING</h2>
+              <p class="discord-text">
+                Join our Discord to meet fellow players, participate in weekly events, receive instant update announcements, and stay connected with staff!
+              </p>
+              <a href="https://discord.gg/example" data-config-href="DISCORD_URL" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+                <span>JOIN DISCORD NOW</span>
+              </a>
+            </div>
+            <div class="discord-card-preview">
+              <div class="discord-online-badge">
+                <span class="status-dot"></span>
+                <span>1,480 Community Members Online</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Aetheria Discord Hub</h3>
+              <p style="font-size: 0.9rem; color: #4B5563; margin-bottom: 16px;">
+                Voice channels, trading markets, build showcases, and 24/7 ticket support.
+              </p>
+              <div style="background-color: #F3F4F6; padding: 10px; border-radius: 8px; font-size: 0.85rem; color: #374151;">
+                📌 <strong>Recent Announcement:</strong> Spring Building Contest starts this Saturday with $500 in rewards!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. STAFF SECTION -->
+    <section id="staff" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">👑 Leadership</span>
+          <h2 class="section-title">Meet Our Staff Team</h2>
+          <p class="section-subtitle">Dedicated administrators and developers making the server great.</p>
+        </div>
+        <div id="staff-grid" class="staff-grid">
+          <!-- Dynamically populated from js/components.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SERVER RULES SECTION -->
+    <section id="rules" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">📜 Community Guidelines</span>
+          <h2 class="section-title">Server Rules</h2>
+          <p class="section-subtitle">Please follow these simple rules to ensure a safe, fair, and friendly environment for everyone.</p>
+        </div>
+        <div id="rules-list" class="rules-list">
+          <!-- Dynamically populated from js/components.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. GALLERY SECTION -->
+    <section id="gallery" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">🖼️ World Showcase</span>
+          <h2 class="section-title">Server Gallery</h2>
+          <p class="section-subtitle">Explore builds, PvP arenas, and community moments.</p>
+        </div>
+
+        <div id="gallery-filter-bar" class="gallery-filter-bar">
+          <!-- Filter buttons generated in js/components.js -->
+        </div>
+
+        <div id="gallery-grid" class="gallery-grid">
+          <!-- Gallery cards generated in js/components.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FUN / EASTER EGGS SECTION -->
+    <section class="section easter-egg-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">🎮 Mini Interactive</span>
+          <h2 class="section-title">Mine the Dirt Block!</h2>
+          <p class="section-subtitle">Click the block below to break it and earn a hidden achievement.</p>
+        </div>
+        <div class="block-interactive-container">
+          <div class="mining-block" title="Click to mine!">
+            🟩
+          </div>
+          <p style="font-size: 0.85rem; color: var(--color-text-light);">Hint: Try typing the secret Konami code on your keyboard!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close modal">&times;</button>
+      <img class="lightbox-img" src="" alt="Gallery fullsize view">
+      <div class="lightbox-details">
+        <h3 class="lightbox-title heading-display" style="font-size: 1.75rem;"></h3>
+        <p class="lightbox-desc" style="color: var(--color-text-muted);"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. FOOTER SECTION -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo">
+            <div class="brand-icon">⛏️</div>
+            <span data-config="SERVER_NAME">Aetheria SMP</span>
+          </a>
+          <p style="margin-bottom: 16px;" data-config="SERVER_DESCRIPTION">
+            A premium, non-pay-to-win Minecraft Survival SMP with custom biomes, player economy, and balanced PvP.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <button class="btn btn-primary btn-sm copy-ip-btn" data-ip="play.aetheriamc.com">
+              <span>📋 Copy Server IP</span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">Server Info</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#join">How to Join</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Community</h4>
+          <ul class="footer-links">
+            <li><a href="#community">Discord Server</a></li>
+            <li><a href="#staff">Staff Team</a></li>
+            <li><a href="#rules">Server Rules</a></li>
+            <li><a href="#gallery">Screenshot Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Server IP</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 8px;">Connect using Java or Bedrock:</p>
+          <div style="background-color: #2D3748; padding: 10px 14px; border-radius: 8px; font-family: var(--font-pixel); font-size: 1.25rem; color: #81C784; text-align: center; border: 1px solid #4A5568;" data-config="SERVER_IP">
+            play.aetheriamc.com
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span id="copyright-year">2026</span> <span data-config="SERVER_NAME">Aetheria SMP</span>. All rights reserved. Not affiliated with Mojang Studios.
+        </div>
+        <div>
+          Made with ❤️ for the Minecraft Community
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Config & JS Modules -->
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
